@@ -105,6 +105,12 @@
     </div>
   </div>          
 
+
+
+
+
+
+
   <div>
     <h3> Mars Hemispheres</h3>
     <br>
@@ -113,13 +119,24 @@
 
   </div>
 
+  {% for x in query_mars %}
   <div class="row">
-    <div class="col">col</div>
-    <div class="col">col</div>
+    <div class="col">
+      <img src= "{{ x.hemi_url[0] }}" style='height: 50%; width: 50%; object-fit: contain'>
+    </div>
+    <div class="col">
+      <img src= "{{ x.hemi_url[1] }}" style='height: 50%; width: 50%; object-fit: contain'>
+    </div>
     <div class="w-100"></div>
-    <div class="col">col</div>
-    <div class="col">col</div>
+    <div class="col">
+      <img src= "{{ x.hemi_url[2] }}" style='height: 50%; width: 50%; object-fit: contain'>
+    </div>
+    <div class="col">
+      <img src= "{{ x.hemi_url[3] }}" style='height: 50%; width: 50%; object-fit: contain'>
+    </div>
   </div>
+  {% endfor %}
+  
 
   
   
